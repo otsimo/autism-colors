@@ -1,0 +1,23 @@
+{
+  "name": "autism-colors",
+  "version": "1.0.1",
+  "description": "This tool meant to be generating colors for your User Interfaces that will be used by kids with autism.",
+  "main": "color.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/otsimo/autism-colors.git"
+  },
+  "keywords": [
+    "autism",
+    "color"
+  ],
+  "author": "Burak Tokak",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/otsimo/autism-colors/issues"
+  },
+  "homepage": "https://github.com/otsimo/autism-colors#readme"
+}
