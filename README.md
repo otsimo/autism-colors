@@ -7,6 +7,7 @@ This tool meant to be generating colors for your User Interfaces that will be us
 - Subdued and colours mixed with grey were favoured by the children with autism
 - A predominant preference for colours in the Blue/Green hue sectors was notable
 - A balance between colourfulness and greyness is seen to be popular.
+
 ![How?][https://raw.githubusercontent.com/otsimo/autism-colors/master/how.png]
 
 ###How to use?
