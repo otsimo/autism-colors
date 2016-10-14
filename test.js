@@ -1,6 +1,6 @@
 var autismColors = require("./color.js");
 
-// autismColors(brightOrDark, lessOrMoreVariety, hueValue)
+// autismColors(brightOrDark, lessOrMoreVariety, hueValue);
 
 // Return special colors
 console.log(autismColors(true, true, 'rgb')); // SMTH: [164,158,176]
