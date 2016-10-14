@@ -77,8 +77,12 @@ function randInt(min, max) {
 /**
  *
  * @param {boolean} bright - decides if the color will be dark or bright
+ * @param {boolean} lessOrMoreVariety - decides if the color will be throthed to a smaller tone.
+ * @param {string} returnFormat - Color format to return [hsb, hsl, rgb, rgba, hex]
+ * @param {int} hueValue - (Optional) You can chose the hue value
+ *
  */
-function generateColor(brightOrDark){
+function generateColor(brightOrDark, lessOrMoreVariety, returnFormat, hueValue){
   var b; // need to be between 60 - 70 in order for it to be ASD Friendly
   // B stands for brightness(value) in HSB/HSV color notation.
   if(brightOrDark == true){
@@ -88,4 +92,39 @@ function generateColor(brightOrDark){
   }
   var s; // need to be between 20 - 10 in order for it to be ASD Friendly
   s = randInt(10, 20);
+  var hue;
+  /* hue will be deciding the tone of the color.
+   the pools and researchs shows that kid with autism
+   likes the tones between 270 - 120 degrees.
+   But there is no limiting for tones.
+   --
+   Tones smaller than 15 degree or more than 345 degree
+   is considered giving the child anxiety. (red tones)
+   So we will be excluding that.
+  */
+  if(hueValue){
+    hue = hueValue;
+  }else{
+    if(lessOrMoreVariety == true){
+      hue = randInt(120, 270);
+    }else {
+      hue = randInt(15, 345);
+    }
+  }
+  // return the color;
+  switch (returnFormat) {
+    case "hsb":
+    case "hsv":
+      return [hue, s, b];
+    case "rgb":
+      return hsvToRgb(hue, s, b);
+    case "rgba":
+      var rgbc = hsvToRgb(hue, s, b);
+      return "rgba("+rgbc[0]+", "+rgbc[1]+", "+rgbc[2]+", 1)";
+    case "hex":
+      var rgbc = hsvToRgb(hue, s, b);
+      return "#" + ((1 << 24) + (rgbc[0] << 16) + (rgbc[1] << 8) + rgbc[2]).toString(16).slice(1);
+  }
 }
+
+module.exports = generateColor;
