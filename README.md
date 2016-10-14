@@ -8,7 +8,7 @@ This tool meant to be generating colors for your User Interfaces that will be us
 - A predominant preference for colours in the Blue/Green hue sectors was notable
 - A balance between colourfulness and greyness is seen to be popular.
 
-![How?][https://raw.githubusercontent.com/otsimo/autism-colors/master/how.png]
+![How?](https://raw.githubusercontent.com/otsimo/autism-colors/master/how.png)
 
 ###How to use?
 Install via npm or clone this repo;
