@@ -69,6 +69,11 @@
 
   	return [Math.round(r * 255), Math.round(g * 255), Math.round(b * 255)];
   }
+
+function randInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
 /**
  *
  * @param {boolean} bright - decides if the color will be dark or bright
@@ -77,8 +82,10 @@ function generateColor(brightOrDark){
   var b; // need to be between 60 - 70 in order for it to be ASD Friendly
   // B stands for brightness(value) in HSB/HSV color notation.
   if(brightOrDark == true){
-    b = rand(66, 70); // Brigher
+    b = randInt(66, 70); // Brigher
   }else{
-    b = rand(60, 64); // Darker
+    b = randInt(60, 64); // Darker
   }
+  var s; // need to be between 20 - 10 in order for it to be ASD Friendly
+  s = randInt(10, 20);
 }
