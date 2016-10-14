@@ -1,6 +1,5 @@
-
-  console.log(hsvToRgb(235, 43, 43));
-
+  // we will be using hsv format to generate colors
+  // HSV gives a better interface with its brightness/Value parameter.
   function hsvToRgb(h, s, v) {
   	var r, g, b;
   	var i;
@@ -70,3 +69,16 @@
 
   	return [Math.round(r * 255), Math.round(g * 255), Math.round(b * 255)];
   }
+/**
+ *
+ * @param {boolean} bright - decides if the color will be dark or bright
+ */
+function generateColor(brightOrDark){
+  var b; // need to be between 60 - 70 in order for it to be ASD Friendly
+  // B stands for brightness(value) in HSB/HSV color notation.
+  if(brightOrDark == true){
+    b = rand(66, 70); // Brigher
+  }else{
+    b = rand(60, 64); // Darker
+  }
+}
