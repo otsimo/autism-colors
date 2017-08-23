@@ -4,6 +4,9 @@ Kids with autism can have an especially hard time managing their concentration w
 This tool is intended to generate colors for your User Interfaces that will be used by kids with autism. However, the colors that this tool generates can be used in things like book covers, page and typography design or something as simple as what color to paint a room. 
 
 ### How does it work?
+From here:
+http://www.autism-architects.com/wp-content/uploads/downloads/2012/06/CB-Presentation-Catania-2010.pdf
+
 - Subdued and colours mixed with grey were favored by the children with autism
 - A predominant preference for colours in the Blue/Green hue sectors was notable
 - A balance between colourfulness and greyness is seen to be popular.
